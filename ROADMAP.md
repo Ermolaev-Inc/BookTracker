@@ -5,6 +5,7 @@
 - [x] Create NeonButton Component
 - [x] UI Login Page
 - [ ] Formalise README.md
+- [ ] Setup ESLint
 ## November 2020:
 - [ ] Setup Asp.Net Api Server
 - [ ] Setup DB
