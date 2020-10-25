@@ -13,7 +13,7 @@
     "no-multi-spaces": "error",
     "no-multiple-empty-lines": ["error", { "max": 2 }],
     "prefer-const": "error",
-    "no-use-before-define": "error",
+    //"no-use-before-define": "error",
     "for-direction": "error",
     "getter-return": "error",
     "no-duplicate-case": "error",

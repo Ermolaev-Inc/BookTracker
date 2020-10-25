@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-//import { Route } from 'react-router';
+import React, { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
+import { Login } from "./pages/Login";
 
-export default class App extends Component {
-  static displayName = App.name
+export default function App() {
+  const {isAuth} = useContext(AuthContext);
 
-  render() {
-    return (
-      <>
-      </>
-    );
+  if (isAuth) {
+    return <>App</>;
   }
+  return <Login />;
 }
