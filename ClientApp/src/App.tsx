@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router';
+import React, { Component } from "react";
+//import { Route } from 'react-router';
 
 export default class App extends Component {
-  static displayName = App.name;
+  static displayName = App.name
 
-  render () {
+  render() {
     return (
       <>
       </>
