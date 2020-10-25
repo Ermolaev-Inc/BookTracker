@@ -1,31 +1,36 @@
 {
     "env": {
-        "browser": true
+        "es6": true
     },
-    "extends": [
-        "airbnb",
-        "nextjs"
-    ],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2020,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "import"
-    ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
-        "import/extensions": 0,
-        "import/no-unresolved": 0,
-        "quotes": "off",
-        "no-use-before-define": 0,
-        "no-param-reassign": 0,
-        "jsx-a11y/no-static-element-interactions": 0
+        "no-var": "error",
+        "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+        "no-extra-semi": "error",
+        "semi-spacing": ["error", {"before": false, "after": true}],
+        "semi-style": ["error", "last"],
+        "indent": ["error", 2],
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": ["error", { "max": 2 }],
+        "prefer-const": "error",
+        "no-use-before-define": "error",
+        "for-direction": "error",
+        "getter-return": "error",
+        "no-duplicate-case": "error",
+        "no-empty": "error",
+        "curly": "error",
+        "jsx-quotes": ["error", "prefer-double"],
+        "quotes": ["error", "double"],
+        "quote-props": ["error", "as-needed"],
+        "arrow-spacing": ["error", { "before": true, "after": true }],
+        "no-duplicate-imports": "error",
+        "camelcase": ["error", { "properties": "always" }],
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        "no-whitespace-before-property": "error",
+        "space-before-blocks": "error",
+        "space-before-function-paren": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "no-spaced-func": "error",
+        "valid-jsdoc": "error"
     }
 }
