@@ -1,0 +1,6 @@
+
+*.xml
+*.iml
+*.cs
+*.cache
+obj/rider.project.restore.info
