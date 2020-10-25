@@ -1,7 +1,7 @@
-import { MainLayout } from '../../layouts/MainLayout';
-import s from '../../styles/Login.module.sass';
-import { Input } from '../../components/Input/Input';
-import { NeonButton } from '../../components/NeonButton/NeonButton';
+import { MainLayout } from "../../layouts/MainLayout";
+import s from "../../styles/Login.module.sass";
+import { Input } from "../../components/Input/Input";
+import { NeonButton } from "../../components/NeonButton/NeonButton";
 
 export default function Login() {
   return (
@@ -13,7 +13,7 @@ export default function Login() {
           <Input placeholder="Login" type="text" />
           <Input placeholder="Password" type="password" />
           <NeonButton title="Sign in" color="#75c0ff" />
-          <NeonButton title="Sign up" color="#ff9627" />
+          <NeonButton title="Sign up" color="#9A9A9A" />
         </div>
       </div>
     </MainLayout>
