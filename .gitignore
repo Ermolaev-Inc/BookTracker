@@ -4,3 +4,7 @@
 *.cs
 *.cache
 obj/rider.project.restore.info
+.DS_Store
+obj
+bin
+
