@@ -31,6 +31,8 @@
     "space-before-function-paren": ["error", "never"],
     "space-in-parens": ["error", "never"],
     "no-spaced-func": "error",
-    "valid-jsdoc": "error"
+    "valid-jsdoc": "error",
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"]
   }
 }
