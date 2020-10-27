@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "^26.0.15",
     "@types/node": "^14.14.2",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
@@ -21,18 +20,24 @@
     "sass": "^1.27.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.7",
+    "@types/jest": "^26.0.15",
     "@types/react-router-dom": "^5.1.6",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "ajv": "^6.9.1",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^6.6.0",
     "eslint-config-react-app": "^5.2.0",
     "eslint-plugin-flowtype": "^4.6.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
+    "jest": "^26.6.1",
     "nan": "^2.14.1",
+    "react-test-renderer": "^17.0.1",
     "typescript": "^3.9.7"
   },
   "eslintConfig": {
