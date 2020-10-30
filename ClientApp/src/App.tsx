@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { Login } from "./pages/Login";
+import { AuthContext } from "./context/AuthContext";
 
 export default function App() {
   const { isAuth } = useContext(AuthContext);
 
-  if (isAuth) {
-    return <>App</>;
-  }
-  return <Login />;
+  return(
+    <Switch>
+      <Route path="/auth" component={Login} />
+      <Redirect from="/" to={isAuth ? "/main" : "/auth"} />
+    </Switch>
+  );
 }
