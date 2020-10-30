@@ -8,13 +8,13 @@ export const Login = () => {
 
   return(
     <div className={s.wrapper}>
-      <img className={s.leftSide} src={leftSide} alt=""/>
+      <img className={s.leftSide} src={leftSide} alt="" />
       <div className={s.rightSide}>
-        <img src={logo} alt=""/>
-        <input type="text"/>
-        <input type="password"/>
-        <button>Sign in</button>
-        <button>Sign up</button>
+        <img src={logo} alt="" />
+        <input type="text" className="loginInput" placeholder="Login" />
+        <input type="password" className="passwordInput" placeholder="Password" />
+        <button className="signInBtn">Sign in</button>
+        <button className="signUpBtn">Sign up</button>
       </div>
     </div>
   );
