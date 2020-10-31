@@ -79,4 +79,8 @@ describe("Component should render", () => {
       expect(signUpClass.text()).toBe("Sign up");
     });
   });
+
+  test("Snapshot", () => {
+    expect(component).toMatchSnapshot();
+  });
 });
