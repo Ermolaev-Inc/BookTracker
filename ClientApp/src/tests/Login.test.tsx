@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { shallow, ShallowWrapper } from "enzyme";
+import { render, shallow, ShallowWrapper } from "enzyme";
 import { Login } from "../pages/Login";
 
 const setUp = (...args: any) => shallow(<Login {...args} />);
 
 describe("Component should render", () => {
-  let component: ShallowWrapper<any, Readonly<{}>, Component<{}, {}, any>>;
+  let component: ShallowWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
   beforeEach(() => {
     component = setUp();
   });
@@ -20,23 +20,12 @@ describe("Component should render", () => {
     expect(imgTag.length).toBe(2);
   });
 
-  test("Left side and right side", () => {
+  test("Left side and right side classes", () => {
     const leftSideClass = component.find(".leftSide");
     expect(leftSideClass.length).toBe(1);
 
     const rightSideClass = component.find(".rightSide");
     expect(rightSideClass.length).toBe(1);
-  });
-
-  test("Login & password inputs", () => {
-    const inputsTag = component.find("input");
-    expect(inputsTag.length).toBe(2);
-
-    const loginClass = component.find(".loginInput");
-    expect(loginClass.length).toBe(1);
-
-    const passwordClass = component.find(".passwordInput");
-    expect(passwordClass.length).toBe(1);
   });
 
   describe("Inputs", () => {
@@ -60,8 +49,8 @@ describe("Component should render", () => {
 
   describe("Buttons", () => {
     let buttonsTags;
-    let signInClass: ShallowWrapper<import("enzyme").HTMLAttributes, any, React.Component<{}, {}, any>>;
-    let signUpClass: ShallowWrapper<import("enzyme").HTMLAttributes, any, React.Component<{}, {}, any>>;
+    let signInClass;
+    let signUpClass;
     beforeEach(() => {
       buttonsTags = component.find("button");
       signInClass = component.find(".signInBtn");
@@ -72,11 +61,6 @@ describe("Component should render", () => {
       expect(buttonsTags.length).toBe(2);
       expect(signInClass.length).toBe(1);
       expect(signUpClass.length).toBe(1);
-    });
-
-    test("Titles", () => {
-      expect(signInClass.text()).toBe("Sign in");
-      expect(signUpClass.text()).toBe("Sign up");
     });
   });
 
