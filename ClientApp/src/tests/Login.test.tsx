@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { render, shallow, ShallowWrapper } from "enzyme";
+import React from "react";
+import { shallow, ShallowWrapper } from "enzyme";
 import { Login } from "../pages/Login";
 
 const setUp = (...args: any) => shallow(<Login {...args} />);

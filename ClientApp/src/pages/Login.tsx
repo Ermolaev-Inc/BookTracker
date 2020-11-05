@@ -7,7 +7,7 @@ import { NeonButton } from "../components/NeonButton/NeonButton";
 export const Login = () => {
   // TODO: Inputs
 
-  return(
+  return (
     <div className={s.wrapper}>
       <img className={s.leftSide} src={leftSide} alt="" />
       <div className={s.rightSide}>

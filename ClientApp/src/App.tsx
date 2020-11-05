@@ -6,7 +6,7 @@ import { AuthContext } from "./context/AuthContext";
 export default function App() {
   const { isAuth } = useContext(AuthContext);
 
-  return(
+  return (
     <Switch>
       <Route path="/auth" component={Login} />
       <Redirect from="/" to={isAuth ? "/main" : "/auth"} />

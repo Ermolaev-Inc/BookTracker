@@ -34,7 +34,7 @@ export const NeonButton: React.FC<NeonButtonProps> = ({
     event.target.style.color = `${color}`;
   };
 
-  return(
+  return (
     <Button onMouseEnter={mouseHoverHandler} style={{ color }} onMouseLeave={mouseLeaveHandler} {...props} >
       { title }
     </Button>
