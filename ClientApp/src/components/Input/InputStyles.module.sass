@@ -1,0 +1,18 @@
+$mainColor: #e6e6e6
+$accentColor: #ff9627
+
+.input
+  font-family: Roboto
+  font-weight: 500
+  font-size: 24px
+  border-bottom-color: $mainColor
+  border-bottom-width: 4px
+  border-right-width: 0
+  border-left-width: 0
+  border-top-width: 0
+  outline: none
+  &:focus
+    border-bottom-color: $accentColor
+
+.input::placeholder
+  color: $mainColor
