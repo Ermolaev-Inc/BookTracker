@@ -1,0 +1,14 @@
+language: csharp
+solution: BookTracker.sln
+mono:
+  - latest
+install:
+  - dotnet restore
+  - npm install
+script:
+  - npm run test
+  - npm run build
+after_success:
+  - echo dotnet test and npm test succeeded
+after_failure:
+  - echo dotnet test or npm test failed
