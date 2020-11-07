@@ -1,7 +1,7 @@
 language: csharp
 solution: BookTracker.sln
 mono: none
-dotnet: 3.1.x
+dotnet: 2.1.502
 install:
   - dotnet restore
   - npm install
