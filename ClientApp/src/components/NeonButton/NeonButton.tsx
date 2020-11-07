@@ -1,41 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import { NeonButtonProps } from "./NeonButtonProps";
+import { NeonButtonTypes, NeonButtonProps } from "./NeonButtonProps";
 
-export const NeonButton: React.FC<NeonButtonProps> = ({
-  title = "OK",
-  color = "#79C7FF",
-  fontWeight = "500",
-  fontSize = "18px",
-  ...props
-}) => {
-  const Button = styled.div`
-  font-family: "Roboto";
-  font-weight: ${fontWeight};
+const Button = styled.div<NeonButtonTypes>`
+  font-family: "Roboto", sans-serif;
+  font-weight: ${props => props.fontWeight};
   display: inline-block;
   border: 0;
   border-radius: 10px;
+  color: ${props => props.neonColor};
   text-decoration: none;
-  font-size: ${fontSize};
+  font-size: ${props => props.fontSize};
   overflow: hidden;
   transition: 0.2s;
   padding: 15px 30px;
   cursor: pointer;
+  &:hover {
+    background: ${props => props.neonColor};
+    box-shadow: 0 0 10px ${props => props.neonColor}, 0 0 40px ${props => props.neonColor}, 0 0 80px ${props => props.neonColor};
+    color: ${props => props.neonTextColor};
+  }
   `;
 
-  const mouseHoverHandler = (event: any) => {
-    event.target.style.background = `${color}`;
-    event.target.style.boxShadow = `0 0 10px ${color}, 0 0 40px ${color}, 0 0 80px ${color}`;
-    event.target.style.color = "#ffffff";
-  };
-  const mouseLeaveHandler = (event: any) => {
-    event.target.style.background = "";
-    event.target.style.boxShadow = "";
-    event.target.style.color = `${color}`;
-  };
+export const NeonButton: React.FC<NeonButtonProps> = ({
+  title = "OK",
+  fontFamily = "Roboto",
+  fontWeight = 500,
+  fontSize = "24px",
+  neonTextColor = "#ffffff",
+  neonColor = "#79C7FF",
+  ...props
+}) => {
 
   return (
-    <Button onMouseEnter={mouseHoverHandler} style={{ color }} onMouseLeave={mouseLeaveHandler} {...props} >
+    <Button fontFamily={fontFamily} fontWeight={fontWeight} fontSize={fontSize} neonTextColor={neonTextColor} neonColor={neonColor} {...props} >
       { title }
     </Button>
   );

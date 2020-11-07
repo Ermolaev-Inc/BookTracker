@@ -1,8 +1,12 @@
-export interface NeonButtonProps {
-  title?: string;
-  color?: string;
-  fontWeight?: string | number;
+export type NeonButtonTypes = {
+  fontFamily?: string;
+  fontWeight?: number;
   fontSize?: string;
-  onClick?(args: any): void;
+  neonTextColor?: string;
+  neonColor?: string;
+}
+
+export interface NeonButtonProps extends NeonButtonTypes {
+  title?: string;
   [name: string]: any;
 }

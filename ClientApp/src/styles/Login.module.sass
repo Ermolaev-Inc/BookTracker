@@ -2,11 +2,6 @@ $lightTextColor: #e6e6e6
 $regularTextColor: #000000
 $accentColor: #ff9627
 
-@mixin signBtn
-  cursor: default
-  border: 0
-  background: none
-
 .wrapper
   display: grid
   grid-template-columns: 31.1% 68.9%
@@ -21,10 +16,6 @@ $accentColor: #ff9627
     align-items: center
     width: 100%
     height: 100vh
-    .signInBtn
-      @include signBtn
-    .signUpBtn
-      @include signBtn
 
 .loginInput::placeholder
   color: $lightTextColor
