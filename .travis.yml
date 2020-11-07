@@ -1,14 +1,11 @@
 language: csharp
 solution: BookTracker.sln
 mono: none
-dotnet: 2.1.502
-install:
-  - dotnet restore
-  - npm install
+dotnet: 3.1
 script:
-  - npm run test
-  - npm run build
+  - dotnet restore
+  - dotnet build
 after_success:
-  - echo dotnet test and npm test succeeded
+  - echo dotnet succeeded
 after_failure:
-  - echo dotnet test or npm test failed
+  - echo dotnet failed
