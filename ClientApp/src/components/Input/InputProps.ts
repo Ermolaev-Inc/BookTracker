@@ -1,8 +1,13 @@
-export interface InputProps {
+export type InputTypes = {
+  fontWeight?: number;
+  fontSize?: string;
+  borderBottomColor?: string;
+  borderBottomColorFocus?: string;
+}
+
+export interface InputProps extends InputTypes {
   className?: string;
   type?: string;
   placeholder?: string;
-  onClick?(args: any): void;
-  onChange?(args: any): void;
   [name: string]: any;
 }
