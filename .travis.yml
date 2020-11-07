@@ -7,7 +7,9 @@ script:
   - cd ClientApp
   - npm install
   - npm run test
+  - cd ..
+  - dotnet build
 after_success:
-  - echo dotnet succeeded
+  - echo frontend tests & dotnet build succeeded
 after_failure:
-  - echo dotnet failed
+  - echo frontend tests or dotnet build failed
