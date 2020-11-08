@@ -8,7 +8,11 @@ export default function App() {
 
   return (
     <Switch>
-      <Route path="/auth" component={Login} />
+      {
+        !isAuth &&
+        <Route path="/auth" component={Login} />
+      }
+      <Redirect from="/auth" to={isAuth ? "/main" : "/auth"} />
       <Redirect from="/" to={isAuth ? "/main" : "/auth"} />
     </Switch>
   );
