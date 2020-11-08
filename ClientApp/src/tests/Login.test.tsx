@@ -1,5 +1,5 @@
 import React from "react";
-import { mount, render, shallow, ShallowWrapper, ReactWrapper } from "enzyme";
+import { render } from "enzyme";
 import { Login } from "../pages/Login";
 
 const setUp = (...args: any) => render(<Login {...args} />);
