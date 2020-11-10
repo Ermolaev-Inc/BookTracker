@@ -1,16 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { ColumnTypes, ColumnProps } from "./ColumnProps";
-
-const ColumnWrapper = styled.div<ColumnTypes>`
-  display: grid;
-  grid-template-rows: 10.1823708% 89.8176292%;
-  justify-items: center;
-  width: 23.0902778%;
-  height: 95%;
-  background-color: ${props => props.backgroundColor};
-  color: ${props => props.textColor};
-`;
+import { ColumnProps } from "./ColumnProps";
+import { ColumnWrapper, Children } from "./ColumnStyles";
 
 export const Column: React.FC<ColumnProps> = ({
   title = "Column",
@@ -26,7 +16,7 @@ export const Column: React.FC<ColumnProps> = ({
       {...props}
     >
       <div>{title}</div>
-      <div>{children}</div>
+      <Children>{children}</Children>
     </ColumnWrapper>
   );
 };
