@@ -12,7 +12,10 @@ export const Main = () => {
   const [state, setState]: [any, any] = useState({
     want: {
       title: "Want",
-      items: [{ _id: "1", title: "Clean Code" }],
+      items: [
+        { _id: "1", title: "Clean Code" }, 
+        { _id: "5", title: "Clean Code 2" },
+      ],
     },
     bought: {
       title: "Bought",
