@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Login } from "./pages/Login";
-import { AuthContext } from "./context/AuthContext";
 import { Main } from "./pages/Main";
+import { AuthContext } from "./context/AuthContext";
+
+import { mockData } from "./mockData";
 
 export default function App() {
   const { isAuth } = useContext(AuthContext);
@@ -15,7 +17,7 @@ export default function App() {
       }
       {
         isAuth &&
-        <Route path="/main" component={Main} />
+        <Route path="/main" component={() => <Main data={mockData} />} />
       }
       <Redirect from="/auth" to={isAuth ? "/main" : "/auth"} />
       <Redirect from="/" to={isAuth ? "/main" : "/auth"} />
