@@ -48,6 +48,7 @@
   "scripts": {
     "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
+    "buildCI": "CI= npm run build",
     "test": "react-scripts test --updateSnapshot",
     "test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
     "eject": "react-scripts eject",

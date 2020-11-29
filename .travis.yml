@@ -7,7 +7,7 @@ script:
   - cd ClientApp
   - npm install
   - npm run test
-  - npm run build
+  - npm run buildCI
   - cd ..
   - dotnet build
 after_success:

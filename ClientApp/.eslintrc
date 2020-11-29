@@ -3,7 +3,8 @@
     "es6": true
   },
   "parser": "@typescript-eslint/parser",
-  "extends": "jesse",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["jesse", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off"
