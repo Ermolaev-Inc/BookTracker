@@ -1,35 +1,17 @@
 import React, { useState } from "react";
 import s from "../styles/Main.module.sass";
 import _ from "lodash";
-import { Column } from "../components/Column/Column";
-import { ColumnElement } from "../components/ColumnElement/ColumnElement";
-import { v4 } from "uuid";
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
 
-export const Main = () => {
-  // TODO: Getting data from db
-  // TODO: Refactoring
-  const [state, setState]: [any, any] = useState({
-    want: {
-      title: "Want",
-      items: [
-        { _id: "1", title: "Clean Code" }, 
-        { _id: "5", title: "Clean Code 2" },
-      ],
-    },
-    bought: {
-      title: "Bought",
-      items: [{ _id: "2", title: "Clean Code" }],
-    },
-    reading: {
-      title: "Reading",
-      items: [{ _id: "3", title: "Clean Code" }],
-    },
-    hadRead: {
-      title: "Had Read",
-      items: [{ _id: "4", title: "Clean Code" }],
-    },
-  });
+import { MainProps } from "../propsInterfaces";
+
+// TODO: Getting data from db
+// TODO: Refactoring data
+export const Main: React.FC<MainProps> = ({
+  data
+}) => {
+  const [state, setState] = useState(data);
+
   const handleDragEnd = (result: DropResult) => {
     const { source, destination } = result;
     if (!destination) {
@@ -54,6 +36,7 @@ export const Main = () => {
       return prev;
     });
   };
+
   return (
     <div className={s.wrapper}> 
       <DragDropContext onDragEnd={handleDragEnd}>
