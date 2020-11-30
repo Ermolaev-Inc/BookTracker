@@ -6,7 +6,7 @@ import { AuthContext } from "./context/AuthContext";
 
 import { mockData } from "./mockData";
 
-export default function App() {
+export const App = () => {
   const { isAuth } = useContext(AuthContext);
 
   return (
@@ -23,4 +23,4 @@ export default function App() {
       <Redirect from="/" to={isAuth ? "/main" : "/auth"} />
     </Switch>
   );
-}
+};
