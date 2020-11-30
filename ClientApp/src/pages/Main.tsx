@@ -6,7 +6,6 @@ import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautif
 import { MainProps } from "../propsInterfaces";
 
 // TODO: Getting data from db
-// TODO: Refactoring data
 export const Main: React.FC<MainProps> = ({
   data
 }) => {
@@ -24,7 +23,7 @@ export const Main: React.FC<MainProps> = ({
       return;
     }
     const itemCopy = { ...state[source.droppableId].items[source.index] };
-    setState((prev: any) => {
+    setState((prev) => {
       prev = { ...prev };
       prev[source.droppableId].items.splice(source.index, 1);
       prev[destination.droppableId].items.splice(
@@ -43,24 +42,23 @@ export const Main: React.FC<MainProps> = ({
         {_.map(state, (data, key) => {
           return (
             <div key={key} className={s.column}>
-              <div style={{ fontWeight: 500, color: "#FF9627", fontSize: "24px" }}>{data.title}</div>
+              <div style={{ fontWeight: 500, color: "#ff9627", fontSize: "24px" }}>{data.title}</div>
               <Droppable droppableId={key}>
-                {(provided, snapshot) => {
+                {(provided) => {
                   return (
                     <div
                       ref={provided.innerRef}
                       {...provided.droppableProps}
                       className={s.element}
                     >
-                      {data.items.map((el: any, index: any) => {
+                      {data.items.map((e, index) => {
                         return (
                           <Draggable
-                            key={el._id}
+                            key={e._id}
                             index={index}
-                            draggableId={el._id}
+                            draggableId={e._id}
                           >
-                            {(provided, snapshot) => {
-                              console.log(snapshot);
+                            {(provided) => {
                               return (
                                 <div
                                   className={s.elementD}
@@ -68,8 +66,8 @@ export const Main: React.FC<MainProps> = ({
                                   {...provided.draggableProps}
                                   {...provided.dragHandleProps}
                                 >
-                                  <span>{el.title}</span>
-                                  <span>Author</span>
+                                  <span>{e.title}</span>
+                                  <span>{e.author}</span>
                                 </div>
                               );
                             }}

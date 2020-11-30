@@ -10,5 +10,5 @@ export interface IColumn {
 interface IBook {
   _id: string;
   title: string;
-  //author: string;
+  author: string;
 }
