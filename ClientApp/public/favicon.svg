@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(0.000000, 7.000000)" fill="#ff9627" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(35.816514, 0.000000)">
+                <rect id="Rectangle" x="0" y="0" width="9.98165138" height="48.733945" rx="4.99082569"></rect>
+                <rect id="Rectangle" x="18.2018349" y="0" width="9.98165138" height="48.733945" rx="4.99082569"></rect>
+            </g>
+            <g id="Group">
+                <path d="M0,0 L13.7981651,0 C18.6623244,0 22.6055046,3.94318018 22.6055046,8.80733945 L22.6055046,9.68807339 C22.6055046,14.5522327 18.6623244,18.4954128 13.7981651,18.4954128 L0,18.4954128 L0,18.4954128 L0,0 Z" id="Rectangle"></path>
+                <path d="M0,29.0642202 L15.266055,29.0642202 C20.1302143,29.0642202 24.0733945,33.0074005 24.0733945,37.8715596 L24.0733945,39.9532944 C24.0733945,44.8174538 20.1302143,48.7606338 15.266055,48.7606338 L0,48.7606338 L0,48.7606338 L0,29.0642202 Z" id="Rectangle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

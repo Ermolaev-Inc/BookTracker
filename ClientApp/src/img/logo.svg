@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="42px" viewBox="0 0 55 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="#ff9627" fill-rule="evenodd">
+        <g id="Light" transform="translate(-728.000000, -59.000000)" fill="#ff9627">
+            <g id="Logo" transform="translate(728.000000, 59.000000)">
+                <g>
+                    <g id="Group-2" transform="translate(31.000000, 0.000000)" fill-rule="nonzero">
+                        <rect id="Rectangle" x="0" y="0" width="8.5" height="42" rx="4.25"></rect>
+                        <rect id="Rectangle" x="15.5" y="0" width="8.5" height="42" rx="4.25"></rect>
+                    </g>
+                    <g id="Group" fill-rule="nonzero">
+                        <path d="M0,0 L12.0365854,0 C16.2797487,0 19.7195122,3.37797135 19.7195122,7.54491018 L19.7195122,8.2994012 C19.7195122,12.46634 16.2797487,15.8443114 12.0365854,15.8443114 L0,15.8443114 L0,15.8443114 L0,0 Z" id="Rectangle"></path>
+                        <path d="M0,24.8982036 L13.3170732,24.8982036 C17.5602365,24.8982036 21,28.2761751 21,32.4431138 L21,34.2264562 C21,38.3933951 17.5602365,41.7713663 13.3170732,41.7713663 L0,41.7713663 L0,41.7713663 L0,24.8982036 Z" id="Rectangle"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
