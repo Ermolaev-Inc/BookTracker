@@ -1,12 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Npgsql;
 
 namespace BookTracker
@@ -20,25 +15,20 @@ namespace BookTracker
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
 
         private static void TestConnection()
         {
-            using (NpgsqlConnection con = GetConnection())
+            using var con = GetConnection();
+            con.Open();
+            if (con.State == ConnectionState.Open)
             {
-                con.Open();
-                if (con.State == ConnectionState.Open)
-                {
-                    Console.WriteLine("Connected");
-                }
+                Console.WriteLine("Connected");
             }
         }
         
-        private static NpgsqlConnection GetConnection()
-        {
-            return new NpgsqlConnection(@"Server=localhost;Port=5432;User Id=ilyaermolaev;Database=booktracker;");
-        }
+        private static NpgsqlConnection GetConnection() => new NpgsqlConnection(@"Server=localhost;Port=5432;User Id=ilyaermolaev;Database=booktracker;");
     }
 }
